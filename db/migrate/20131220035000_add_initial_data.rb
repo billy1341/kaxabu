@@ -3,7 +3,7 @@ require 'roo'
 
 class AddInitialData < ActiveRecord::Migration
   def up
-    s = Roo::Excelx.new('db\\migrate\\migrate_data\\噶哈巫語分類辭典.xlsx')
+    s = Roo::Excelx.new('db/migrate/migrate_data/噶哈巫語分類辭典.xlsx')
     s.default_sheet = s.sheets[0]
     篇名_ = nil
     (3..s.last_row).each do |i|
